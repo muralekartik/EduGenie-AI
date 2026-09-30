@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - AI Learning Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">🎓 EduGenie</div>
+    <div class="tagline">Google Gemini Powered Learning Assistant</div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <span class="badge">✨ AI-Powered Learning</span>
+        <h1>Learn Smarter.<br><span>Learn with EduGenie.</span></h1>
+        <p>Your intelligent learning companion for understanding, summarizing, practicing, and improving your knowledge.</p>
+    </section>
+
+    <section class="features">
+
+        <div class="card">
+            <div class="card-icon">💬</div>
+            <h2>Ask a Question</h2>
+            <p>Ask anything and get a clear, student-friendly answer.</p>
+            <textarea id="qnaQuestion" placeholder="Example: What is machine learning?"></textarea>
+            <textarea id="qnaContext" placeholder="Optional context"></textarea>
+            <button onclick="askQuestion()">Ask EduGenie</button>
+            <div id="qnaResult" class="result"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📚</div>
+            <h2>Explain a Topic</h2>
+            <p>Learn difficult concepts in simple language.</p>
+            <input id="explainTopic" type="text" placeholder="Example: Neural Networks">
+            <select id="explainLevel">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <button onclick="explainTopic()">Explain Topic</button>
+            <div id="explainResult" class="result"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📝</div>
+            <h2>Summarize Text</h2>
+            <p>Turn long study material into concise notes.</p>
+            <textarea id="summaryText" placeholder="Paste your study material here..."></textarea>
+            <select id="summaryLength">
+                <option value="short">Short</option>
+                <option value="medium" selected>Medium</option>
+                <option value="detailed">Detailed</option>
+            </select>
+            <button onclick="summarizeText()">Summarize</button>
+            <div id="summaryResult" class="result"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h2>Generate Quiz</h2>
+            <p>Test your knowledge with AI-generated questions.</p>
+            <input id="quizTopic" type="text" placeholder="Example: Python Programming">
+            <select id="quizDifficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button onclick="generateQuiz()">Generate Quiz</button>
+            <div id="quizResult" class="result"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <h2>Learning Recommendations</h2>
+            <p>Get personalized suggestions for your learning journey.</p>
+            <input id="recommendationTopic" type="text" placeholder="Example: Data Structures">
+            <button onclick="getRecommendations()">Get Recommendations</button>
+            <div id="recommendationResult" class="result"></div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>EduGenie © 2026 · Powered by Google Gemini</p>
+</footer>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
